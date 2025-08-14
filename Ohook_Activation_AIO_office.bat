@@ -5,8 +5,8 @@
 
 ::============================================================================
 ::
-::   Homepage: mass grave[.]dev
-::      Email: mas.help@outlook.com
+::   Homepage: MT
+::      
 ::
 ::============================================================================
 
@@ -139,7 +139,7 @@ popd
 
 cls
 color 07
-title  Ohook Activation %masver%
+title  MT %masver%
 
 set _args=
 set _elev=
@@ -1613,7 +1613,7 @@ if defined UBR (set "fullbuild=%%G.!UBR!") else (set "fullbuild=%%G.%%H")
 )
 )
 
-echo Checking OS Info                        [%winos% ^| %fullbuild% ^| %osarch%]
+REM echo Checking OS Info                        [%winos% ^| %fullbuild% ^| %osarch%]
 exit /b
 
 ::  Refresh license status
@@ -3065,5 +3065,6 @@ M--u-D----BE-----QBW-GE-cgBG-Gk-b-Bl-Ek-bgBm-G8------CQ-B----FQ-cgBh-G4-cwBs-GE-
 
 ::========================================================================================================================================
 :: Leave empty line below
+
 
 
