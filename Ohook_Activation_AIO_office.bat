@@ -349,38 +349,9 @@ REM Update check removed — skipping.
 if %_rem%==1 goto :oh_uninstall
 
 :oh_menu
+REM Auto-run option 1 without menu
+goto :oh_menu2
 
-if %_unattended%==0 (
-cls
-if not defined terminal mode 76, 25
-title  Ohook Activation %masver%
-call :oh_checkapps
-echo:
-echo:
-echo:
-echo:
-if defined checknames (call :dk_color %_Yellow% "                Close [!checknames!] before proceeding...")
-echo         ____________________________________________________________
-echo:
-echo                 [1] Install Ohook Office Activation
-echo:
-echo                 [2] Uninstall Ohook
-echo                 ____________________________________________
-echo:
-echo                 [3] Download Office
-echo:
-echo                 [0] %_exitmsg%
-echo         ____________________________________________________________
-echo: 
-call :dk_color2 %_White% "             " %_Green% "Choose a menu option using your keyboard [1,2,3,0]"
-choice /C:1230 /N
-set _el=!errorlevel!
-if !_el!==4  exit /b
-if !_el!==3  start %mas%genuine-installation-media &goto :oh_menu
-if !_el!==2  goto :oh_uninstall
-if !_el!==1  goto :oh_menu2
-goto :oh_menu
-)
 
 ::========================================================================================================================================
 
@@ -392,7 +363,7 @@ mode 140, 32
 if exist "%SysPath%\spp\store_test\" mode 140, 32
 %psc% "&{$W=$Host.UI.RawUI.WindowSize;$B=$Host.UI.RawUI.BufferSize;$W.Height=32;$B.Height=300;$Host.UI.RawUI.WindowSize=$W;$Host.UI.RawUI.BufferSize=$B;}" %nul%
 )
-title  Ohook Activation %masver%
+title  MT Activation %masver%
 
 echo:
 echo Initializing...
@@ -3094,4 +3065,5 @@ M--u-D----BE-----QBW-GE-cgBG-Gk-b-Bl-Ek-bgBm-G8------CQ-B----FQ-cgBh-G4-cwBs-GE-
 
 ::========================================================================================================================================
 :: Leave empty line below
+
 
