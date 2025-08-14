@@ -1,12 +1,12 @@
-@set masver=3.4
+@set MT=3.5
 @echo off
 
 
 
 ::============================================================================
 ::
-::   Homepage: mass grave[.]dev
-::      Email: mas.help@outlook.com
+::   Homepage: MT 
+::     
 ::
 ::============================================================================
 
@@ -139,7 +139,7 @@ popd
 
 cls
 color 07
-title  HWID Activation %masver%
+title  HWID Activation %MT%
 
 set _args=
 set _elev=
@@ -333,51 +333,17 @@ exit /b
 :skipQE
 
 ::========================================================================================================================================
-
 ::  Check for updates
-
-set -=
-set old=
-set pingp=
-set upver=%masver:.=%
-
-for %%A in (
-activ%-%ated.win
-mass%-%grave.dev
-) do if not defined pingp (
-for /f "delims=[] tokens=2" %%B in ('ping -n 1 %%A') do (
-if not "%%B"=="" (set old=1& set pingp=1)
-for /f "delims=[] tokens=2" %%C in ('ping -n 1 updatecheck%upver%.%%A') do (
-if not "%%C"=="" set old=
-)
-)
-)
-
-if defined old (
-echo ________________________________________________
-%eline%
-echo Your version of MAS [%masver%] is outdated.
-echo ________________________________________________
-echo:
-if not %_unattended%==1 (
-echo [1] Get Latest MAS
-echo [0] Continue Anyway
-echo:
-call :dk_color %_Green% "Choose a menu option using your keyboard [1,0] :"
-choice /C:10 /N
-if !errorlevel!==2 rem
-if !errorlevel!==1 (start %selfgit% & start %github% & start %mas% & exit /b)
-)
-)
-
+REM Update check removed — skipping.
 ::========================================================================================================================================
+
 
 cls
 if not defined terminal (
 mode 110, 34
 if exist "%SysPath%\spp\store_test\" mode 134, 34
 )
-title  HWID Activation %masver%
+title  HWID Activation %MT%
 
 echo:
 echo Initializing...
@@ -1848,3 +1814,4 @@ exit /b
 
 ::========================================================================================================================================
 :: Leave empty line below
+
