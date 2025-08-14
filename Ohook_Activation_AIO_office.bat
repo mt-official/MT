@@ -1055,11 +1055,11 @@ goto :oh_hookinstall_error
 )
 
 echo:
-echo Symlinking System's sppc.dll            ["%_hookPath%\sppcs.dll"] [Successful]
+REM echo Symlinking System's sppc.dll            ["%_hookPath%\sppcs.dll"] [Successful]
 if defined exhook (
-echo Copying Custom %_hook% to            ["%_hookPath%\sppc.dll"] [Successful]
+REM echo Copying Custom %_hook% to            ["%_hookPath%\sppc.dll"] [Successful]
 ) else (
-echo Extracting Custom %_hook% to         ["%_hookPath%\sppc.dll"] [Successful]
+REM echo Extracting Custom %_hook% to         ["%_hookPath%\sppc.dll"] [Successful]
 )
 
 goto :oh_hookinstall_error
@@ -3065,6 +3065,7 @@ M--u-D----BE-----QBW-GE-cgBG-Gk-b-Bl-Ek-bgBm-G8------CQ-B----FQ-cgBh-G4-cwBs-GE-
 
 ::========================================================================================================================================
 :: Leave empty line below
+
 
 
 
