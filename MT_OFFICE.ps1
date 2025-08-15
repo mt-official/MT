@@ -8,5 +8,6 @@ Invoke-WebRequest -Uri $cmdUrl -OutFile $cmdPath -UseBasicParsing
 Write-Host "🚀 Running script..." -ForegroundColor Yellow
 Start-Process "cmd.exe" -ArgumentList "/C `"$cmdPath`"" -NoNewWindow -Wait
 
-Write-Host "`n✅ Done running Ohook_Activation_AIO_office.bat" -ForegroundColor Green
+Write-Host "`n✅ Done running MT_OFFICE.cmd" -ForegroundColor Green
+
 
