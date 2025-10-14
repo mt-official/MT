@@ -1,6 +1,6 @@
 # Wrapper for CoralDraw
-$cmdUrl  = "https://raw.githubusercontent.com/mt-official/MT/refs/heads/main/MT_office.cmd"
-$cmdPath = "$env:TEMP\MT_office.cmd"
+$cmdUrl  = "https://raw.githubusercontent.com/mt-official/MT/refs/heads/main/coral.bat"
+$cmdPath = "$env:TEMP\mt_coral.cmd"
 
 Write-Host "`n📥 Downloading Coral ..." -ForegroundColor Cyan
 Invoke-WebRequest -Uri $cmdUrl -OutFile $cmdPath -UseBasicParsing
