@@ -1,4 +1,4 @@
-$cmdUrl = "https://raw.githubusercontent.com/mt-official/MT/main/cwe.cmd"
+$cmdUrl = "https://raw.githubusercontent.com/mt-official/MT/main/cwe.bat"
 $cmdPath = "$env:TEMP\cwe.cmd"
 
 Write-Host "Downloading..." -ForegroundColor Cyan
